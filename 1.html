@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        let total = 100000;
+        let timer = Date.now();
+        for(let i = 0; i < total; i++) {
+            let li = document.createElement('li');
+            li.innerHTML = i;
+            container.appendChild(li)
+        }
+        console.log('js执行', Date.now() - timer)
+        console.log('js执行时间',Date.now() - timer)
+        setTimeout(() => {
+            console.log('js执行加渲染',Date.now() - timer)
+        })
+    </script>
+</body>
+</html>
